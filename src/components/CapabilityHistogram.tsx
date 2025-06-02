@@ -246,7 +246,7 @@ const CapabilityHistogram: React.FC<CapabilityHistogramProps> = ({ data }) => {
         text: isMobile ? `Capacidad - ${ctq_name}` : `Histograma de Capacidad - ${ctq_name}`,
         font: {
           size: isMobile ? 14 : 16,
-          weight: 'bold',
+          weight: 'bold' as const,
         },
       },
       tooltip: {
@@ -418,10 +418,7 @@ const CapabilityHistogram: React.FC<CapabilityHistogramProps> = ({ data }) => {
             <Chart
               type="scatter"
               data={chartData}
-              options={{
-                ...chartOptions,
-                parsing: false,
-              }} />
+              options={chartOptions as any} />
           </Box>
         </Grid>
 

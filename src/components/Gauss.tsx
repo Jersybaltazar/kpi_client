@@ -197,7 +197,7 @@ const GaussianChart: React.FC<GaussianChartProps> = ({ data, lsl, usl, nominal }
         text: isMobile ? 'Distribución Normal' : 'Campana de Gauss - Distribución Normal',
         font: {
           size: isMobile ? 14 : 16,
-          weight: 'bold'
+          weight: 'bold' as const
         },
         padding: isMobile ? 5 : 10
       },

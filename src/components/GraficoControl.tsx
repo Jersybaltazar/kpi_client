@@ -174,7 +174,7 @@ const GraficoControl: React.FC<GraficoControlProps> = ({ data, results, ctq }) =
         text: isMobile ? 'Gráfico de Control' : 'Gráfico de Control de Mediciones Individuales',
         font: {
           size: isMobile ? 14 : 16,
-          weight: 'bold'
+          weight: 'bold' as const
         },
         padding: isMobile ? 10 : 20
       },
@@ -282,7 +282,7 @@ const GraficoControl: React.FC<GraficoControlProps> = ({ data, results, ctq }) =
         position: 'relative',
         width: '100%'
       }}>
-        <Line data={chartData} options={chartOptions} />
+        <Line data={chartData} options={chartOptions as any} />
       </Box>
 
       {/* Información adicional del control estadístico */}

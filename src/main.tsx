@@ -12,7 +12,7 @@ const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       staleTime: 1000 * 60 * 5, // Cachear datos por 5 minutos
-      cacheTime: 1000 * 60 * 30, // Mantener datos en caché por 30 minutos
+      gcTime: 1000 * 60 * 30, // Mantener datos en caché por 30 minutos
       refetchOnWindowFocus: false, // Deshabilitar re-fetch automático al enfocar ventana (opcional)
     },
   },
