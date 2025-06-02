@@ -223,7 +223,7 @@ const GaussianChart: React.FC<GaussianChartProps> = ({ data, lsl, usl, nominal }
       annotation: {
         annotations: {
           lslLine: {
-            type: 'line',
+            type: 'line' as const,
             xMin: lsl,
             xMax: lsl,
             borderColor: 'rgba(255, 0, 0, 0.8)',
@@ -240,7 +240,7 @@ const GaussianChart: React.FC<GaussianChartProps> = ({ data, lsl, usl, nominal }
             }
           },
           uslLine: {
-            type: 'line',
+            type: 'line' as const,
             xMin: usl,
             xMax: usl,
             borderColor: 'rgba(255, 0, 0, 0.8)',
@@ -257,7 +257,7 @@ const GaussianChart: React.FC<GaussianChartProps> = ({ data, lsl, usl, nominal }
             }
           },
           meanLine: {
-            type: 'line',
+            type: 'line' as const,
             xMin: mean,
             xMax: mean,
             borderColor: 'rgba(0, 0, 255, 0.8)',
@@ -274,7 +274,7 @@ const GaussianChart: React.FC<GaussianChartProps> = ({ data, lsl, usl, nominal }
             }
           },
           nominalLine: {
-            type: 'line',
+            type: 'line' as const,
             xMin: nominalValue,
             xMax: nominalValue,
             borderColor: 'rgba(0, 128, 0, 0.8)',
@@ -369,7 +369,7 @@ const GaussianChart: React.FC<GaussianChartProps> = ({ data, lsl, usl, nominal }
         position: 'relative',
         width: '100%'
       }}>
-        <Line data={chartData} options={chartOptions} />
+        <Line data={chartData} options={chartOptions as any} />
       </Box>
 
       {/* Información adicional - Solo visible en pantallas no móviles o como resumen en móviles */}
